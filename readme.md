@@ -1,0 +1,2 @@
+# AIM
+This project was realised during a class on Java EE. This project is a web flight manager. For this project I used DAO and Fabric patterns. It also use servlet, JSP and JavaBeans. You can find the report I produced in this repository

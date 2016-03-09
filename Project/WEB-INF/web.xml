@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:jsp="http://java.sun.com/xml/ns/javaee/jsp" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>JavaAirlines IM LAMOURI 214</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  		<filter>
+    		<filter-name>Set Character Encoding</filter-name>
+    		<filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
+    		<init-param>
+    			<param-name>encoding</param-name>
+        		<param-value>UTF-8</param-value>
+    		</init-param>
+    		<init-param>
+        		<param-name>ignore</param-name>
+        		<param-value>false</param-value>
+    		</init-param>
+		</filter>
+		<filter-mapping>
+    		<filter-name>Set Character Encoding</filter-name>
+    		<url-pattern>/*</url-pattern>
+		</filter-mapping>
+  		
+  		<filter>
+    		<filter-name>FiltreRestriction</filter-name>
+    		<filter-class>filtre.FiltreRestriction</filter-class>
+		</filter>
+		<filter-mapping>
+    		<filter-name>FiltreRestriction</filter-name>
+    		<url-pattern>/*</url-pattern>
+		</filter-mapping>
+ 	<servlet>
+   			<servlet-name>Test</servlet-name>
+    		<servlet-class>dao.appliTestDAO</servlet-class>
+  		</servlet>
+  		<servlet-mapping>
+    		<servlet-name>Test</servlet-name>
+    		<url-pattern>/Test</url-pattern>
+  		</servlet-mapping>
+  
+  		<servlet>
+   			<servlet-name>Accueil</servlet-name>
+    		<servlet-class>controleurs.bases.Accueil</servlet-class>
+  		</servlet>
+  		<servlet-mapping>
+    		<servlet-name>Accueil</servlet-name>
+    		<url-pattern>/index.html</url-pattern>
+  		</servlet-mapping>
+  
+  		<servlet>
+    		<servlet-name>Connexion</servlet-name>
+    		<servlet-class>controleurs.bases.Connexion</servlet-class>
+  		</servlet>
+  		<servlet-mapping>
+    		<servlet-name>Connexion</servlet-name>
+    		<url-pattern>/Connexion</url-pattern>
+  		</servlet-mapping>
+  		
+  		<servlet>
+   			<servlet-name>Inscription</servlet-name>
+    		<servlet-class>controleurs.bases.Inscription</servlet-class>
+  		</servlet>
+  		<servlet-mapping>
+    		<servlet-name>Inscription</servlet-name>
+    		<url-pattern>/Inscription</url-pattern>
+  		</servlet-mapping>
+  
+  		<servlet>
+    		<servlet-name>Deconnexion</servlet-name>
+    		<servlet-class>controleurs.bases.Deconnexion</servlet-class>
+  		</servlet>
+  		<servlet-mapping>
+    		<servlet-name>Deconnexion</servlet-name>
+    		<url-pattern>/Deconnexion</url-pattern>
+  		</servlet-mapping>
+  
+  		<servlet>
+    		<servlet-name>Planning</servlet-name>
+    		<servlet-class>controleurs.Planning</servlet-class>
+  		</servlet>
+  		<servlet-mapping>
+    		<servlet-name>Planning</servlet-name>
+    		<url-pattern>/Planning</url-pattern>
+  		</servlet-mapping>
+  		
+  		<servlet>
+    		<servlet-name>Reservation</servlet-name>
+    		<servlet-class>controleurs.Reservation</servlet-class>
+  		</servlet>
+  		<servlet-mapping>
+    		<servlet-name>Reservation</servlet-name>
+    		<url-pattern>/Reservation</url-pattern>
+  		</servlet-mapping>
+  		
+  		
+  		<servlet>
+    		<servlet-name>SupprimerReservation</servlet-name>
+    		<servlet-class>controleurs.SupprimerReservation</servlet-class>
+  		</servlet>
+  		<servlet-mapping>
+    		<servlet-name>SupprimerReservation</servlet-name>
+    		<url-pattern>/SupprimerReservation</url-pattern>
+  		</servlet-mapping>
+  		
+  		<servlet>
+    		<servlet-name>SupprimerDepart</servlet-name>
+    		<servlet-class>controleurs.SupprimerDepart</servlet-class>
+  		</servlet>
+  		<servlet-mapping>
+    		<servlet-name>SupprimerDepart</servlet-name>
+    		<url-pattern>/SupprimerDepart</url-pattern>
+  		</servlet-mapping>
+  		<servlet>
+    		<servlet-name>MotDePasse</servlet-name>
+    		<servlet-class>controleurs.bases.MotDePasse</servlet-class>
+  		</servlet>
+  		<servlet-mapping>
+    		<servlet-name>MotDePasse</servlet-name>
+    		<url-pattern>/MotDePasse</url-pattern>
+  		</servlet-mapping>
+  		<servlet>
+    		<servlet-name>AjoutReservation</servlet-name>
+    		<servlet-class>controleurs.AjoutReservation</servlet-class>
+  		</servlet>
+  		<servlet-mapping>
+    		<servlet-name>AjoutReservation</servlet-name>
+    		<url-pattern>/AjoutReservation</url-pattern>
+  		</servlet-mapping>
+  		<servlet>
+    		<servlet-name>Moderation</servlet-name>
+    		<servlet-class>controleurs.Moderation</servlet-class>
+  		</servlet>
+  		<servlet-mapping>
+    		<servlet-name>Moderation</servlet-name>
+    		<url-pattern>/Moderation</url-pattern>
+  		</servlet-mapping>
+  		<servlet>
+    		<servlet-name>AjoutDepart</servlet-name>
+    		<servlet-class>controleurs.AjoutDepart</servlet-class>
+  		</servlet>
+  		<servlet-mapping>
+    		<servlet-name>AjoutDepart</servlet-name>
+    		<url-pattern>/AjoutDepart</url-pattern>
+  		</servlet-mapping>
+  		<servlet>
+    		<servlet-name>SupprimerVol</servlet-name>
+    		<servlet-class>controleurs.SupprimerVol</servlet-class>
+  		</servlet>
+  		<servlet-mapping>
+    		<servlet-name>SupprimerVol</servlet-name>
+    		<url-pattern>/SupprimerVol</url-pattern>
+  		</servlet-mapping>
+  		
+  		
+  		<jsp-config>
+    		<jsp-property-group>
+      			<url-pattern>*.jsp</url-pattern>
+      			<include-prelude>/WEB-INF/taglibs.jsp</include-prelude>
+    		</jsp-property-group>
+  		</jsp-config>
+</web-app>
